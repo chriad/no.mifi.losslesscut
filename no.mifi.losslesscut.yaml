@@ -7,7 +7,7 @@ sdk-extensions:
 
 command: /app/bin/run.sh
 finish-args:
-  - --socket=x11
+  - --socket=wayland
   - --share=ipc
   - --device=dri         # Without DRI the app doesn't come up :-/
   - --socket=pulseaudio  # We want to play sound, I suppose
@@ -80,6 +80,6 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - /app/lossless-cut/losslesscut --no-sandbox
+          - /app/lossless-cut/losslesscut --no-sandbox --ozone-platform-hint=auto
 
       - generated-sources.json

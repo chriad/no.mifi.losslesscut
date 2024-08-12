@@ -1,0 +1,1 @@
+flatpak-builder --force-clean --user --install-deps-from=flathub --repo=./losslesscut-custom-build/ --install ./losslesscut-builddir/ ./no.mifi.losslesscut/no.mifi.losslesscut.yaml
